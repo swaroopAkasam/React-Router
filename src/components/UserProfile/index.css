@@ -1,0 +1,57 @@
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading styling */
+.heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Counter display styling */
+.count {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Button styling */
+.button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Decrease button styling (Optional: Different color for the second button) */
+.button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.button:nth-child(2):hover {
+    background-color: #a71d2a;
+}
