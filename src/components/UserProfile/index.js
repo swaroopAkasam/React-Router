@@ -1,32 +1,20 @@
-import { Component } from "react";
-import './index.css';
+// UserProfile.js
+import React from "react";
 
-class Counter extends Component {
-    state = {count : 0}
-    onIncrement = () => {
-        this.setState(prevState => {
-            console.log(`prev state count is ${prevState.count}`)
-            return { count: prevState.count+1 }
-        })
-    }
-    onDecrement = () => {
-        this.setState(prevState => {
-            console.log(`prev state count is ${prevState.count}`)
-            return { count: prevState.count-1 }
-        })
-    }
-    render() {
-        const {count} = this.state
-        return (
-            <div className="container">
-                <h1 className="heading">Counter</h1>
-                <p className="count">{count}</p>
-                <div>
-                    <button className="button" onClick={this.onIncrement}>Increase</button>
-                    <button className="button" onClick={this.onDecrement}>Decrease</button>
-                </div>
-            </div>
-        )
-    }
-}
-export default Counter
+const UserProfile = ({ user, onDelete }) => {
+  const { id, fName, lName, favColor } = user;
+
+  return (
+    <div className="user-profile">
+      <h3>{fName} {lName}</h3>
+      <p>
+        Favorite Color: <span style={{ color: favColor }}>{favColor}</span>
+      </p>
+      <button className="delete-button" onClick={() => onDelete(id)}>
+        Delete
+      </button>
+    </div>
+  );
+};
+
+export default UserProfile;
