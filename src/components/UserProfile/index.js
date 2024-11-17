@@ -2,14 +2,19 @@ import { Component } from "react";
 import './index.css';
 
 class Counter extends Component {
+    state = {count : 0}
     onIncrement = () => {
-        console.log("Increment clicked")
+        this.setState(prevState => {
+            console.log(`prev state count is ${prevState.count}`)
+            return { count: prevState.count+1 }
+        })
     }
     render() {
+        const {count} = this.state
         return (
             <div className="container">
                 <h1 className="heading">Counter</h1>
-                <p className="count">0</p>
+                <p className="count">{count}</p>
                 <div>
                     <button className="button" onClick={this.onIncrement}>Increase</button>
                     <button className="button">Decrease</button>
