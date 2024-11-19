@@ -22,12 +22,6 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-
-        <>
-        <Home />
-        <About />
-        <Contact />
-        </>
       </div>
     </Router>
   );
